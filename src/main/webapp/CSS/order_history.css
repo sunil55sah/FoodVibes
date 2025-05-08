@@ -1,0 +1,36 @@
+@charset "UTF-8";
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #333 url(images/background.jpg) no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #333;
+}
+
+
+.circular-logo { 
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff7f50;
+
+    /* Soft shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    /* Subtle glow */
+    filter: drop-shadow(0 0 6px #ff9f68);
+
+    /* Smooth animation */
+    transition: transform 0.3s ease, filter 0.3s ease;
+
+    /* Add animations */
+    animation: pulse 2s infinite, borderGlow 3s infinite;
+}
+
+/* When mouse hovers on logo */
+.circular-logo:hover {
+    transform: scale(1.1) rotate(3deg); /* Zoom + slight tilt */
+    filter: drop-shadow(0 0 14px #ff9f68); /* Brighter glow */
+}
